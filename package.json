@@ -9,6 +9,7 @@
     "format": "prettier --write ./**/*.{vue,ts,tsx,js,jsx,css,less,scss,json,md}"
   },
   "dependencies": {
+    "@types/node": "^17.0.8",
     "axios": "^0.24.0",
     "pinia": "^2.0.9",
     "reset.css": "^2.0.2",
