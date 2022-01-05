@@ -11,4 +11,14 @@ export default defineConfig({
     },
     extensions: [".js", ".json", ".ts", ".tsx", ".vue"],
   },
+  css: {
+    preprocessorOptions: {
+      scss: {
+        additionalData: `
+          @import "@/assets/scss/variable.scss";
+          @import "@/assets/scss/mixin.scss";
+        `,
+      },
+    },
+  },
 });
