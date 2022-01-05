@@ -9,7 +9,11 @@
     "format": "prettier --write ./**/*.{vue,ts,tsx,js,jsx,css,less,scss,json,md}"
   },
   "dependencies": {
-    "vue": "^3.2.25"
+    "axios": "^0.24.0",
+    "pinia": "^2.0.9",
+    "reset.css": "^2.0.2",
+    "vue": "^3.2.25",
+    "vue-router": "^4.0.12"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^5.9.0",
