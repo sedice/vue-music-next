@@ -50,8 +50,10 @@ const navList = reactive<INavItem[]>([
     height: 40px;
     line-height: 40px;
     padding: 0px 10px;
-
     border-bottom: 2px solid transparent;
+    span {
+      letter-spacing: 0.2em;
+    }
     &.active_nav {
       border-color: $color-theme;
     }
