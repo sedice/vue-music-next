@@ -41,13 +41,14 @@ withDefaults(
   min-height: 1px;
   font-size: 0;
   touch-action: pan-y;
-  width: 100%;
   position: relative;
+  width: 100vw;
+  overflow: hidden;
   .slider-content {
     position: relative;
     overflow: hidden;
     white-space: nowrap;
-    width: 100%;
+
     .slider-page {
       display: inline-block;
       transform: translate3d(0, 0, 0);
