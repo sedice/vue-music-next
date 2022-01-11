@@ -18,36 +18,14 @@ interface IProps {
   click: true;
   probeType: number;
 }
-const props = defineProps<IProps>();
+const props = withDefaults(defineProps<IProps>(), {
+  click: true,
+  probeType: 0,
+});
 
 const emits = defineEmits(["scroll"]);
 const rootRef = ref(null);
 const { scroll } = useScroll(rootRef, props, emits);
-
-// import useScroll from "./useScroll";
-// import { ref } from "vue";
-// export default {
-//   name: "Scroll",
-//   props: {
-//     click: {
-//       type: Boolean,
-//       default: () => true,
-//     },
-//     probeType: {
-//       type: Number,
-//       default: () => 0,
-//     },
-//   },
-//   emits: ["scroll"],
-//   setup(props, { emit }) {
-//     const rootRef = ref(null);
-//     const { scroll } = useScroll(rootRef, props, emit);
-//     return {
-//       rootRef,
-//       scroll,
-//     };
-//   },
-// };
 </script>
 
 <style></style>
