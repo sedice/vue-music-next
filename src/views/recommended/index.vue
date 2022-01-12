@@ -1,5 +1,5 @@
 <template>
-  <div class="recommended">
+  <div v-loading:[loadingText]="loading" class="recommended">
     <Scroll class="scroll-content">
       <div>
         <div class="slider-wrapper">
@@ -36,8 +36,11 @@ const reactiveResult = reactive<IRecommendedResult>({
 });
 
 const loading = ref(false);
+const loadingText = ref("加载中...");
 onMounted(async () => {
+  loading.value = true;
   const { sliders, albums } = await getRecommend();
+  loading.value = false;
   reactiveResult.sliders = sliders;
   reactiveResult.albums = albums;
 });
