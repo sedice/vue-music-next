@@ -26,6 +26,10 @@ const props = withDefaults(defineProps<IProps>(), {
 const emits = defineEmits(["scroll"]);
 const rootRef = ref(null);
 const { scroll } = useScroll(rootRef, props, emits);
+
+defineExpose({
+  scroll,
+});
 </script>
 
 <style></style>
