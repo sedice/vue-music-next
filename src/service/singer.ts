@@ -22,10 +22,3 @@ export function getSingerList() {
     method: "GET",
   });
 }
-
-export function getSingerDetail(singer: { mid: number }) {
-  return request({
-    url: `/api/getSingerList/${singer.mid}`,
-    method: "GET",
-  });
-}

@@ -15,10 +15,12 @@ export default {
 import { getSingerList, ISingerData, ISinger } from "@/service/singer";
 import indexList from "@/components/base/index-list/index-list.vue";
 import { ref, onMounted } from "vue";
+import { useRouter } from "vue-router";
 
 const singerList = ref<ISingerData[]>([]);
 const selectedSinger = ref<ISinger | null>(null);
 
+const router = useRouter();
 onMounted(async () => {
   const result = await getSingerList();
   singerList.value = result.singers;
@@ -26,7 +28,7 @@ onMounted(async () => {
 
 const selectSinger = (singer: ISinger) => {
   selectedSinger.value = singer;
-  // this.$router.push({ path: `/singer/${singer.mid}` });
+  router.push({ path: `/singer/${singer.mid}` });
 };
 </script>
 

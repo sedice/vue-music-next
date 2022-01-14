@@ -4,6 +4,7 @@ import Singer from "@/views/singer/index.vue";
 import Recommended from "@/views/recommended/index.vue";
 import Serch from "@/views/serch/index.vue";
 import Rank from "@/views/rank/index.vue";
+import SingerDetail from "@/views/singer-detail/index.vue";
 
 const routes: RouteRecordRaw[] = [
   {
@@ -21,6 +22,12 @@ const routes: RouteRecordRaw[] = [
       {
         path: "/singer",
         component: Singer,
+        children: [
+          {
+            path: ":id",
+            component: SingerDetail,
+          },
+        ],
       },
       {
         path: "/serch",
